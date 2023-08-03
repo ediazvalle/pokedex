@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import PokemonList from './PokemonList';
 import Pagination from "./pagination";
 import axios from 'axios';
@@ -37,11 +38,19 @@ function App() {
 
   return (
     <>
-      <PokemonList pokemon={pokemon}/>
-      <Pagination
-        gotoNextPage={nextPage ? gotoNextPage : null}
-        gotoPrevPage={prevPage ? gotoPrevPage : null}
-      />
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="about" element={<About />} />
+          <Route path="home" element={<Home />}/>
+          <Route path="pokemon/:id" element={<PokemonDetail />} />
+          <Route path="pokemon" element={<PokemonList pokemon={pokemon} />} />
+        </Routes>
+      </BrowserRouter> */}
+          <PokemonList pokemon={pokemon} />
+          <Pagination
+            gotoNextPage={nextPage ? gotoNextPage : null}
+            gotoPrevPage={prevPage ? gotoPrevPage : null}
+          />
     </>
   )
 }
