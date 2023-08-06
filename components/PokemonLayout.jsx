@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, Outlet } from "react-router-dom"
 
-export default function HostLayout() {
+export default function PokemonLayout() {
     return (
         <>
             <nav className="host-nav">
